@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delhi Public School - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ICONS (inline SVG, no extra files needed). Use an icon with: svg class="icon" and use href="#i-" plus the icon name -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-teacher" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></symbol>
+      <symbol id="i-quote" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M4 17c0-4 1.5-7.5 5-9.5l1 1.5C8 10.5 7.2 12 7.2 13.5H10V20H4v-3zm10 0c0-4 1.5-7.5 5-9.5l1 1.5c-2 1.5-2.8 3-2.8 4.5H20V20h-6v-3z"/></symbol>
+      <symbol id="i-book-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+      <symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></symbol>
+      <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+      <symbol id="i-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+      <symbol id="i-board" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></symbol>
+      <symbol id="i-bus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><path d="M9 18h5"/><circle cx="16" cy="18" r="2"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></symbol>
+      <symbol id="i-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <h2 class="logo"><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg> Delhi Public School</h2>
+      <button id="menuBtn" class="menu-btn">&#9776;</button>
+      <nav id="menu">
+          <a href="index.html" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#footer">Contact</a>
+          <a href="contact.html">Admission</a>
+      </nav>  
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Welcome to Delhi Public School</h1>
+        <p>Nurturing minds and building a bright future.</p>
+        <a href="contact.html" class="btn">Apply for Admission <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="grid two about-grid">
+        <img src="images/school2.jpg" alt="School campus with students" class="photo">
+        <div>
+          <h2 class="title left">About Our School</h2>
+          <p>
+            Delhi Public School is a private school that focuses on good education,
+            discipline and overall development of every student. We help children
+            grow in studies, sports and creativity.
+          </p>
+          <p>
+            Our teachers give personal attention to every child, and our campus gives
+            students a safe place to learn, play and make friends. From the first day
+            in school to the board exams, we guide each student with care.
+          </p>
+          <ul class="ticks">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Experienced and caring teachers</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Safe and clean campus</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Focus on studies, sports and activities</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid three about-cards">
+        <div class="card center-card">
+          <h3><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg> Our Mission</h3>
+          <p>To give every child quality education and the confidence to face the world.</p>
+        </div>
+        <div class="card center-card">
+          <h3><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg> Our Vision</h3>
+          <p>To be a school where students grow into responsible, kind and successful citizens.</p>
+        </div>
+        <div class="card center-card">
+          <h3><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg> Our Values</h3>
+          <p>Honesty, discipline, respect, teamwork and a love for learning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUMBERS -->
+  <section class="section grey">
+    <div class="container grid four">
+      <div class="box"><span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span><h3>30+</h3><p>Years</p></div>
+      <div class="box"><span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span><h3>3000+</h3><p>Students</p></div>
+      <div class="box"><span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-teacher"/></svg></span><h3>150+</h3><p>Teachers</p></div>
+      <div class="box"><span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg></span><h3>95%</h3><p>Results</p></div>
+    </div>
+  </section>
+
+    <!-- PRINCIPAL'S MESSAGE (replace the name and message with the real ones) -->
+  <section class="section grey" id="principal">
+    <div class="container">
+      <h2 class="title">Principal Speaks</h2>
+      <div class="grid principal-grid">
+        <img src="images/principal.jpg" alt="Principal of Delhi Public School" class="principal-img">
+        <div class="message">
+          <p class="quote">
+            <svg class="icon quote-icon" aria-hidden="true"><use href="#i-quote"/></svg>
+            "Education is not only about marks. It is about building curiosity,
+            confidence and good character."
+          </p>
+          <p>Dear Parents and Students,</p>
+          <p>
+            Welcome to Delhi Public School. Our aim is to give every child a happy
+            and safe place to learn, where hard work is celebrated and every
+            talent is noticed.
+          </p>
+          <p>
+            Together with our dedicated teachers and supportive parents, we help
+            students grow in studies, sports, arts and values, so that they are
+            ready for the future.
+          </p>
+          <p>I warmly invite you to be a part of our school family.</p>
+          <p class="signature">
+            <strong>Principal</strong><br>
+            Delhi Public School
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title">Our Classes</h2>
+      <div class="grid three">
+        <div class="card">
+          <img src="images/primary.jpg" alt="Primary class blackboard with ABC blocks">
+          <h3><svg class="icon" aria-hidden="true"><use href="#i-book-open"/></svg> Primary</h3>
+          <p>Class 1 to 5. Basic reading, writing, maths and activities.</p>
+        </div>
+        <div class="card">
+          <img src="images/middle.jpg" alt="Middle school maths and science board">
+          <h3><svg class="icon" aria-hidden="true"><use href="#i-flask"/></svg> Middle School</h3>
+          <p>Class 6 to 8. Science, social studies, computer and languages.</p>
+        </div>
+        <div class="card">
+          <img src="images/secondary.jpg" alt="Graduation cap on books">
+          <h3><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg> Secondary</h3>
+          <p>Class 9 to 12. Board exam preparation and career guidance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACILITIES -->
+  <section class="section grey">
+    <div class="container">
+      <h2 class="title">Facilities</h2>
+      <div class="grid three">
+        <div class="photo-card">
+          <img src="images/lab.jpg" alt="Science Laboratory">
+          <p><svg class="icon" aria-hidden="true"><use href="#i-flask"/></svg> Science Laboratory</p>
+        </div>
+        <div class="photo-card">
+          <img src="images/computer2.jpg" alt="Computer Lab">
+          <p><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg> Computer Lab</p>
+        </div>
+        <div class="photo-card">
+          <img src="images/library2.jpg" alt="Library">
+          <p><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg> Library</p>
+        </div>
+        <div class="photo-card">
+          <img src="images/ground.jpg" alt="Sports Ground">
+          <p><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg> Sports Ground</p>
+        </div>
+        <div class="photo-card">
+          <img src="images/classroom.jpg" alt="Smart Classrooms">
+          <p><svg class="icon" aria-hidden="true"><use href="#i-board"/></svg> Smart Classrooms</p>
+        </div>
+        <div class="photo-card">
+          <img src="images/bus.jpg" alt="School Transport">
+          <p><svg class="icon" aria-hidden="true"><use href="#i-bus"/></svg> School Transport</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- FOOTER -->
+  <footer id="footer">
+      <div class="container footer-container">
+
+          <div class="footer-box">
+              <h3>Delhi Public School</h3>
+              <p>
+                  Nurturing young minds with quality education,
+                  discipline and creativity. Building a brighter
+                  future for every student.
+              </p>
+          </div>
+
+          <div class="footer-box">
+              <h3>Quick Links</h3>
+              <a href="index.html">Home</a>
+              <a href="#about">About Us</a>
+              <a href="#principal">Principal's Message</a>
+              <a href="contact.html">Admission</a>
+          </div>
+
+          <div class="footer-box">
+              <h3>Contact Us</h3>
+              <p class="info-line"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> <span>MVP Colony, Visakhapatnam, Andhra Pradesh</span></p>
+              <p class="info-line"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> <span>+91 98765 43210</span></p>
+              <p class="info-line"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> <span>info@dpsschool.com</span></p>
+              <p class="info-line"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> <span>Mon - Sat: 8:00 AM - 4:00 PM</span></p>
+          </div>
+
+      </div>
+
+      <div class="footer-bottom">
+          <p>
+              &copy; <span id="year"></span> Delhi Public School.
+              All rights reserved.
+          </p>
+      </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

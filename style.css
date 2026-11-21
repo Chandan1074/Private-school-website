@@ -1,0 +1,634 @@
+/* ---------- Colors (change them here) ---------- */
+:root {
+  --maroon: #790D16;
+  --maroon-dark: #5a0a11;   /* darker maroon for hover */
+  --sand: #E5D3AF;
+  --cream: #F5EFE1;
+  --blue: hsl(55, 63%, 71%);
+  --ink: #3a1d20;           /* dark text colour */
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    #about,
+    #principal,
+    #footer {
+        scroll-margin-top: 80px;
+    }
+}
+
+
+
+/* ---------- Basic setup ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body { width: 100%; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.6;
+  font-size: clamp(16px, 0.95vw + 4px, 20px);   /* text grows on big screens */
+  min-height: 100vh;          /* page always fills the screen height */
+  display: flex;
+  flex-direction: column;
+}
+
+footer { margin-top: auto; }  /* footer stays at the bottom on short pages */
+
+.container {
+  width: 94%;                 /* full-width layout */
+  max-width: none;
+  margin: auto;
+}
+
+.center { text-align: center; max-width: 700px; margin: auto; }
+
+/* ---------- Header ---------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--maroon);
+  color: var(--cream);
+  padding: 14px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: var(--cream);
+  text-decoration: none;
+  margin-left: 20px;
+  padding-bottom: 3px;
+}
+
+nav a:hover,
+nav a.active {
+  border-bottom: 2px solid var(--sand);
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--cream);
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    padding: 0 60px;
+    min-height: 550px;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url("images/school-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero-text {
+    max-width: 800px;
+}
+
+.hero-text h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 25px;
+
+}
+
+/* ---------- Button ---------- */
+.btn {
+  display: inline-block;
+  background: var(--maroon);
+  color: var(--cream);
+  border: none;
+  padding: 11px 26px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover { background: var(--maroon-dark); }
+
+/* ---------- Sections ---------- */
+.section { padding: 55px 0; }
+.grey { background: var(--sand); }
+
+.title {
+  text-align: center;
+  color: var(--maroon);
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.title.left { text-align: left; }
+
+/* ---------- Grids ---------- */
+.grid { display: grid; gap: 20px; }
+.grid.two   { grid-template-columns: 1fr 1fr; gap: 40px; }
+.grid.three { grid-template-columns: repeat(3, 1fr); }
+.grid.four  { grid-template-columns: repeat(4, 1fr); }
+
+.box {
+  text-align: center;
+  padding: 15px;
+}
+
+.box h3 { font-size: 32px; color: var(--maroon); }
+
+/* ---------- About cards (mission / vision / values) ---------- */
+.about-cards { margin-top: 40px; }
+.center-card { text-align: center; border-top: 4px solid var(--maroon); }
+
+/* ---------- Numbers band ---------- */
+.stats-band { background: var(--maroon); color: var(--cream); }
+.stats-band .box h3 { color: var(--sand); }
+
+/* ---------- Principal's message ---------- */
+.grid.principal-grid {
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.principal-img {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 5 / 6;
+  object-fit: cover;
+  justify-self: center;
+  border-radius: 12px;
+  border: 5px solid var(--cream);
+  box-shadow: 0 6px 16px rgba(58, 29, 32, 0.3);
+}
+
+.message p { margin-bottom: 12px; }
+
+.quote {
+  font-size: 1.3em;
+  font-style: italic;
+  color: var(--maroon);
+  border-left: 5px solid var(--maroon);
+  padding-left: 18px;
+  margin-bottom: 18px;
+}
+
+.signature { margin-top: 18px; color: var(--maroon); }
+
+/* ---------- Images ---------- */
+.photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 600 / 440;
+  max-width: 720px;           /* stops the picture getting too big */
+  justify-self: center;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(58, 29, 32, 0.25);
+}
+
+.photo.small { aspect-ratio: 3 / 2; max-width: 520px; margin-top: 18px; display: block; justify-self: start; box-shadow:none }
+
+.about-grid { align-items: center; }
+.about-grid .title { margin-bottom: 12px; }
+
+.ticks { margin: 12px 0 0 20px; }
+.ticks li { margin-bottom: 4px; }
+
+.card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.photo-card {
+  background: var(--cream);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(58, 29, 32, 0.18);
+  border-bottom: 4px solid var(--maroon);
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-card p {
+  position: relative;          /* keeps the label above the zoomed image */
+  background: var(--cream);
+  text-align: center;
+  font-weight: bold;
+  color: var(--maroon);
+  padding: 10px;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Hover effect for facilities: card lifts, image zooms, label turns maroon */
+.photo-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo-card img {
+  transition: transform 0.4s;
+}
+
+.photo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(58, 29, 32, 0.35);
+}
+
+.photo-card:hover img {
+  transform: scale(1.1);
+}
+
+.photo-card:hover p {
+  background: var(--maroon);
+  color: var(--cream);
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: #fff;
+  border: 1px solid var(--sand);
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.card h3 { color: var(--maroon); margin-bottom: 8px; }
+
+.card:hover { box-shadow: 0 4px 12px rgba(58, 29, 32, 0.2); }
+
+/* ---------- Facilities ---------- */
+.facilities {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.facilities li {
+  background: #fff;
+  padding: 14px;
+  text-align: center;
+  border-left: 4px solid var(--maroon);
+  border-radius: 4px;
+}
+
+
+/* ---------- Contact page ---------- */
+
+
+/* ---------- Admission Hero ---------- */
+
+.admission-hero {
+    min-height: 350px;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.1)
+        ),
+        url("images/admission3.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.admission-hero h1 {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.admission-hero p {
+    font-size: 18px;
+}
+
+@media (max-width: 750px) {
+    .admission-hero {
+        min-height: 250px;
+        background-position: center;
+        padding: 30px 0;
+    }
+
+    .admission-hero h1 {
+        font-size: 30px;
+    }
+
+    .admission-hero p {
+        font-size: 15px;
+    }
+}
+
+ol {
+    margin-left: 20px;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+
+/* ---------- School Details ---------- */
+
+.section .card h3 {
+    color: var(--maroon);
+    margin-bottom: 15px;
+}
+
+.section .card p {
+    line-height: 1.7;
+}
+
+
+/* ---------- Form ---------- */
+
+.form {
+    background: var(--sand);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(58, 29, 32, 0.12);
+}
+
+.form label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--maroon);
+}
+
+.form input,
+.form select,
+.form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 4px;
+    background: var(--cream);
+    color: var(--ink);
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+    outline: none;
+    border: 1px solid var(--maroon);
+    box-shadow: 0 0 5px rgba(121, 13, 22, 0.3);
+}
+
+.form textarea {
+    resize: vertical;
+}
+
+.form .btn {
+    margin-top: 20px;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.form .btn:hover {
+    background: var(--maroon-dark);
+}
+
+
+/* ---------- Form Validation ---------- */
+
+.error {
+    color: #b3261e;
+    font-size: 13px;
+    display: block;
+    min-height: 16px;
+}
+
+#result {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #1b6e3a;
+}
+
+
+/* ---------- Contact Page Responsive ---------- */
+
+@media (max-width: 750px) {
+
+    .page-title {
+        padding: 35px 15px;
+    }
+
+    .page-title h1 {
+        font-size: 26px;
+    }
+
+    .form {
+        padding: 20px;
+    }
+
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background: var(--maroon);
+    color: var(--cream);
+    padding-top: 50px;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-box h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--sand);
+}
+
+.footer-box p {
+    color: var(--cream);
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.footer-box a {
+    display: block;
+    color: var(--cream);
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.footer-box a:hover {
+    color: var(--sand);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--sand);
+    text-align: center;
+    padding: 18px;
+    color: var(--cream);
+}
+
+
+/* RESPONSIVE FOOTER */
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+/* ---------- Icons ---------- */
+.icon {
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -0.2em;
+  flex-shrink: 0;
+}
+
+/* logo in header */
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo .icon { width: 1.5em; height: 1.5em; color: var(--sand); }
+
+/* icon inside buttons */
+.btn .icon { margin-left: 6px; }
+
+/* tick list with check icons */
+.ticks { list-style: none; margin-left: 0; }
+.ticks li { display: flex; align-items: flex-start; gap: 10px; }
+.ticks .icon { color: var(--maroon); margin-top: 0.25em; }
+
+/* round icon above each number */
+.icon-badge {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: var(--maroon);
+  color: var(--cream);
+  display: grid;
+  place-items: center;
+}
+.icon-badge .icon { width: 30px; height: 30px; vertical-align: 0; }
+
+/* quote mark in principal's message */
+.quote-icon { display: block; width: 1.8em; height: 1.8em; margin-bottom: 6px; opacity: 0.85; }
+
+/* class cards: icon beside the title */
+.card h3 { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.sub { display: flex; align-items: center; gap: 10px; }
+.card h3 .icon,
+.sub .icon {
+  box-sizing: content-box;
+  width: 1.1em;
+  height: 1.1em;
+  padding: 8px;
+  border-radius: 50%;
+  background: var(--sand);
+  color: var(--maroon);
+  vertical-align: 0;
+}
+.center-card h3 { justify-content: center; }
+
+/* facility labels: icon + text (icon follows the hover colour) */
+.photo-card p { display: flex; justify-content: center; align-items: center; gap: 8px; }
+.photo-card p .icon { vertical-align: 0; }
+
+/* contact details */
+.info { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.info .icon {
+  box-sizing: content-box;
+  width: 1.1em;
+  height: 1.1em;
+  padding: 9px;
+  border-radius: 50%;
+  background: var(--maroon);
+  color: var(--cream);
+  vertical-align: 0;
+}
+
+
+/* ---------- Mobile ---------- */
+@media (max-width: 750px) {
+  .menu-btn { display: block; }
+
+  nav {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav.show { display: block; }
+
+  nav a {
+    display: block;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  .header-inner { flex-wrap: wrap; }
+
+  .grid.two,
+  .grid.three,
+  .grid.four,
+  .facilities { grid-template-columns: 1fr; }
+
+  .hero h1 { font-size: 28px; }
+  .hero-img { height: 220px; }
+}
