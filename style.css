@@ -1,11 +1,10 @@
-/* ---------- Colors (change them here) ---------- */
 :root {
   --maroon: #790D16;
-  --maroon-dark: #5a0a11;   /* darker maroon for hover */
+  --maroon-dark: #5a0a11;   
   --sand: #E5D3AF;
   --cream: #F5EFE1;
   --blue: hsl(55, 63%, 71%);
-  --ink: #3a1d20;           /* dark text colour */
+  --ink: #3a1d20;          
 }
 
 html {
@@ -20,7 +19,6 @@ html {
 
 
 
-/* ---------- Basic setup ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -34,16 +32,16 @@ body {
   color: var(--ink);
   background: var(--cream);
   line-height: 1.6;
-  font-size: clamp(16px, 0.95vw + 4px, 20px);   /* text grows on big screens */
-  min-height: 100vh;          /* page always fills the screen height */
+  font-size: clamp(16px, 0.95vw + 4px, 20px);   
+  min-height: 100vh;         
   display: flex;
   flex-direction: column;
 }
 
-footer { margin-top: auto; }  /* footer stays at the bottom on short pages */
+footer { margin-top: auto; }  
 
 .container {
-  width: 94%;                 /* full-width layout */
+  width: 94%;                
   max-width: none;
   margin: auto;
 }
@@ -210,7 +208,7 @@ nav a.active {
   width: 100%;
   height: auto;
   aspect-ratio: 600 / 440;
-  max-width: 720px;           /* stops the picture getting too big */
+  max-width: 720px;          
   justify-self: center;
   object-fit: cover;
   border-radius: 10px;
@@ -251,7 +249,7 @@ nav a.active {
 }
 
 .photo-card p {
-  position: relative;          /* keeps the label above the zoomed image */
+  position: relative;         
   background: var(--cream);
   text-align: center;
   font-weight: bold;
@@ -261,7 +259,7 @@ nav a.active {
   transition: background 0.3s, color 0.3s;
 }
 
-/* Hover effect for facilities: card lifts, image zooms, label turns maroon */
+
 .photo-card {
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -311,10 +309,6 @@ nav a.active {
   border-left: 4px solid var(--maroon);
   border-radius: 4px;
 }
-
-
-/* ---------- Contact page ---------- */
-
 
 /* ---------- Admission Hero ---------- */
 
@@ -525,8 +519,6 @@ footer {
 }
 
 
-/* RESPONSIVE FOOTER */
-
 @media (max-width: 768px) {
     .footer-container {
         grid-template-columns: 1fr;
@@ -542,19 +534,16 @@ footer {
   flex-shrink: 0;
 }
 
-/* logo in header */
 .logo { display: flex; align-items: center; gap: 10px; }
 .logo .icon { width: 1.5em; height: 1.5em; color: var(--sand); }
 
-/* icon inside buttons */
 .btn .icon { margin-left: 6px; }
 
-/* tick list with check icons */
+
 .ticks { list-style: none; margin-left: 0; }
 .ticks li { display: flex; align-items: flex-start; gap: 10px; }
 .ticks .icon { color: var(--maroon); margin-top: 0.25em; }
 
-/* round icon above each number */
 .icon-badge {
   width: 64px;
   height: 64px;
@@ -567,10 +556,8 @@ footer {
 }
 .icon-badge .icon { width: 30px; height: 30px; vertical-align: 0; }
 
-/* quote mark in principal's message */
 .quote-icon { display: block; width: 1.8em; height: 1.8em; margin-bottom: 6px; opacity: 0.85; }
 
-/* class cards: icon beside the title */
 .card h3 { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
 .sub { display: flex; align-items: center; gap: 10px; }
 .card h3 .icon,
@@ -586,7 +573,6 @@ footer {
 }
 .center-card h3 { justify-content: center; }
 
-/* facility labels: icon + text (icon follows the hover colour) */
 .photo-card p { display: flex; justify-content: center; align-items: center; gap: 8px; }
 .photo-card p .icon { vertical-align: 0; }
 
