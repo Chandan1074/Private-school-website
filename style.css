@@ -1,4 +1,3 @@
-/* ---------- 1. Theme colors ---------- */
 :root {
     --maroon: #790D16;
     --maroon-dark: #5a0a11;
@@ -8,7 +7,6 @@
     --ink: #3a1d20;
 }
 
-/* ---------- 2. Global styles ---------- */
 * {
     margin: 0;
     padding: 0;
@@ -54,7 +52,6 @@ ol li {
     margin-bottom: 10px;
 }
 
-/* ---------- 3. Common layout ---------- */
 .container {
     width: 94%;
     margin: auto;
@@ -74,7 +71,7 @@ ol li {
     background: var(--sand);
 }
 
-/* ---------- 4. Header and navigation ---------- */
+/* ----------  Header --------- */
 header {
     position: sticky;
     top: 0;
@@ -123,7 +120,7 @@ nav a.active {
     cursor: pointer;
 }
 
-/* ---------- 5. Home page hero ---------- */
+/* ----------   hero ---------- */
 .hero {
     padding: 0 60px;
     min-height: 550px;
@@ -159,7 +156,7 @@ nav a.active {
     margin-bottom: 25px;
 }
 
-/* ---------- 6. Buttons ---------- */
+/* ----------  Buttons ---------- */
 .btn {
     display: inline-block;
     background: var(--maroon);
@@ -181,7 +178,7 @@ nav a.active {
     margin-left: 6px;
 }
 
-/* ---------- 7. Section titles ---------- */
+/* ----------  Section titles ---------- */
 .title {
     text-align: center;
     color: var(--maroon);
@@ -193,7 +190,7 @@ nav a.active {
     text-align: left;
 }
 
-/* ---------- 8. Grids and boxes ---------- */
+/* ---------- Grids and boxes ---------- */
 .grid {
     display: grid;
     gap: 20px;
@@ -240,7 +237,7 @@ nav a.active {
     color: var(--sand);
 }
 
-/* ---------- 9. Principal's message ---------- */
+/* ----------  Principal's message ---------- */
 .grid.principal-grid {
     grid-template-columns: 1fr 2fr;
     gap: 50px;
@@ -284,7 +281,7 @@ nav a.active {
     color: var(--maroon);
 }
 
-/* ---------- 10. Images ---------- */
+/* ---------- Images ---------- */
 .photo {
     width: 100%;
     height: auto;
@@ -322,7 +319,7 @@ nav a.active {
     margin-bottom: 12px;
 }
 
-/* ---------- 11. Photo cards and hover effects ---------- */
+/* ----------  Photo cards  ---------- */
 .photo-card {
     background: var(--cream);
     border-radius: 8px;
@@ -374,7 +371,7 @@ nav a.active {
     vertical-align: 0;
 }
 
-/* ---------- 12. General cards ---------- */
+/* ----------  cards ---------- */
 .card {
     background: #fff;
     border: 1px solid var(--sand);
@@ -416,7 +413,7 @@ nav a.active {
     gap: 10px;
 }
 
-/* ---------- 14. Admission hero ---------- */
+/* ---------- Admission hero ---------- */
 .admission-hero {
     min-height: 350px;
     background-image:
@@ -443,7 +440,7 @@ nav a.active {
     font-size: 18px;
 }
 
-/* ---------- 15. School details ---------- */
+/* ----------  School details ---------- */
 .section .card h3 {
     margin-bottom: 15px;
 }
@@ -452,7 +449,7 @@ nav a.active {
     line-height: 1.7;
 }
 
-/* ---------- 16. Forms ---------- */
+/* ---------- Forms ---------- */
 .form {
     background: var(--sand);
     padding: 30px;
@@ -501,7 +498,7 @@ nav a.active {
     transition: background 0.3s;
 }
 
-/* ---------- 17. Form validation ---------- */
+/* ---------- Form validation ---------- */
 .error {
     color: #b3261e;
     font-size: 13px;
@@ -516,7 +513,7 @@ nav a.active {
 }
 
 
-/* ---------- 19. Footer ---------- */
+/* ----------  Footer ---------- */
 footer {
     background: var(--maroon);
     color: var(--cream);
@@ -627,7 +624,6 @@ footer {
     vertical-align: 0;
 }
 
-/* ---------- 21. Responsive styles: admission and contact ---------- */
 @media (max-width: 750px) {
     .admission-hero {
         min-height: 250px;
@@ -655,7 +651,7 @@ footer {
     }
 }
 
-/* ---------- 22. Responsive footer ---------- */
+/* ---------- Responsive footer ---------- */
 @media (max-width: 768px) {
     .footer-container {
         grid-template-columns: 1fr;
@@ -663,7 +659,7 @@ footer {
     }
 }
 
-/* ---------- 23. Mobile navigation and layout ---------- */
+/* ----------  Mobile navigation and layout ---------- */
 @media (max-width: 750px) {
     .menu-btn {
         display: block;
